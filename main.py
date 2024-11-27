@@ -1,43 +1,37 @@
-#1
-age Int(input("Enter your age: "))
+def currency_converter():
+    print("Вітаємо у конвертері валют!")
 
-if age 18:
+    # Введення курсів валют
+    usd_to_uah = float(input("Введіть курс долара (USD до UAH): "))
+    eur_to_uah = float(input("Введіть курс євро (EUR до UAH): "))
 
-print("You can enter the site!")
-if age <18:
+    while True:
+        print("\nОберіть дію:")
+        print("1. Конвертувати UAH в USD")
+        print("2. Конвертувати UAH в EUR")
+        print("3. Конвертувати USD в UAH")
+        print("4. Конвертувати EUR в UAH")
+        print("5. Вийти")
 
-print("You cannot enter the site!")
+        choice = input("Ваш вибір: ")
 
-#2
-import randon
+        if choice == '1':
+            amount = float(input("Введіть суму в UAH: "))
+            print(f"{amount} UAH = {amount / usd_to_uah:.2f} USD")
+        elif choice == '2':
+            amount = float(input("Введіть суму в UAH: "))
+            print(f"{amount} UAH = {amount / eur_to_uah:.2f} EUR")
+        elif choice == '3':
+            amount = float(input("Введіть суму в USD: "))
+            print(f"{amount} USD = {amount * usd_to_uah:.2f} UAH")
+        elif choice == '4':
+            amount = float(input("Введіть суму в EUR: "))
+            print(f"{amount} EUR = {amount * eur_to_uah:.2f} UAH")
+        elif choice == '5':
+            print("Дякуємо за використання конвертера валют!")
+            break
+        else:
+            print("Невірний вибір, спробуйте ще раз.")
 
-def guess_the_number()1
 
-number_to_guess rondom.rendint(1, 10)
-attempts=0
-print("Bit! I guess a number from 1 to 10. Try to guess it.")
-
-while True:
-user_input Input("Enter your number:
-
-If not user Input.isdigit(): 
-print("Please enter an integer.")
-continue
-
-user_guess int(user_input)
-attempts+= 1
-
-elif if user_guess<number_to_guess:
-
-print("Requested number is greater.")
-
-print("Requested number is less.")
-
-else:
-
-print(f"Congratulations! You guessed the number (number_to_guess) 3 (attempts) cпpo
-break
-
-if__name__=="__main__":
-
-guess the_number()
+currency_converter()
